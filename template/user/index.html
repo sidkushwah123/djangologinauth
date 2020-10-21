@@ -1,0 +1,63 @@
+{% extends 'user/base.html' %}
+{% load static %}
+{% block css %} 
+<link rel="stylesheet" href="{% static 'hello.css' %}">    
+{% endblock %}
+{% block title %}fresho, world!{% endblock %}
+
+
+{% block body %}
+
+    {% if user.is_authenticated %}
+    <div class="container-fluid">
+    <h2 class="div1_hed1 mt-5" > Hello {{user.username}}  </h2>
+
+    </div>
+
+    {% else %}
+    <h2 class="div1_hed1 mt-5">you are not loged in. please login</h2>
+    {% endif %}
+      <div class="container">
+          <div>
+          <h1 class="div1_hed mt-5">IMAGE PROTFOLIO</h1>
+          </div>
+
+          <div class="container">
+              <div class="row mt-2">
+                <div class="col-lg-4 col-md-4 col-sm-12 mt-5">
+                    <img src="{% static 'images/image1.jpg'%}" style="height: 300px; width: 300px;">
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 mt-5">
+                    <img src="{% static 'images/image2.jpg'%}" style="height: 300px; width: 300px;">
+                      
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 mt-5">
+                    <img src="{% static 'images/image3.jpg'%}" style="height: 300px; width: 300px;">
+                      
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 mt-5">
+                  <img src="{% static 'images/image4.jpg'%}" style="height: 300px; width: 300px;">
+                    
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 mt-5">
+                <img src="{% static 'images/image5.jpg'%}" style="height: 300px; width: 300px;">
+                  
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 mt-5">
+              <img src="{% static 'images/image6.jpg'%}" style="height: 300px; width: 300px;">
+                
+              </div>
+              </div>
+          </div>
+
+      </div>
+      
+      
+      
+{% endblock %}
+    
+      
+    
+  
+

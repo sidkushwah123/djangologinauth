@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+p{
+    margin: 0!important;
+}
+body{
+    background-color: rgb(143, 143, 148);
+}
+
+.div1_hed{
+    text-align: center;
+    color: rgb(8, 66, 94);
+}
+.div1_hed1{
+    text-align: center;
+    color: rgb(70, 62, 64);
+}
+.div_image{
+    margin: 0px 10px 0px 10px;
+}
+.footer-style{
+    background-color: rgb(5, 4, 53);
+}

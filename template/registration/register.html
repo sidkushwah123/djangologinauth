@@ -1,0 +1,67 @@
+{% extends 'user/base.html' %}
+
+{% load static %}
+{% block css %} 
+<link rel="stylesheet" href="{% static 'signup.css' %}">   
+{% endblock %}
+
+{% block title %}Signup, world!{% endblock %}
+
+{% block body %}
+  <div class="cntainer-m">
+    <form action="{% url 'register' %}" method="post">
+      {% csrf_token %}
+      <div class="imgcontainer">
+            
+      </div>
+      <div class="container">
+        {% if form.first_name.errors %}
+            {{ form.first_name.errors }}
+        {% endif %}
+            {{form.first_name}}
+
+        {% if form.last_name.errors %}
+            {{ form.last_name.errors }}
+        {% endif %}
+            {{form.last_name}}
+        
+        {% if form.username.errors %}
+            {{ form.username.errors }}
+        {% endif %}
+            {{form.username}}
+
+        {% if form.email.errors %}
+            {{ form.email.errors }}
+        {% endif %}   
+            {{form.email}}
+
+        {% if form.password1.errors %}
+            {{ form.password1.errors }}
+        {% endif %}
+            {{form.password1}}
+
+        {% if form.password2.errors %}
+            {{ form.password2.errors }}  
+        {% endif %}
+            {{form.password2}}
+
+        <button type="submit">register</button>
+
+        <label>
+          <input type="checkbox" checked="checked" style="margin-top: 15px;" name="remember">  I accept the <a href="#">term and policy</a>
+        </label>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+      <div class="container-z"> 
+           <a class="a" href="/login">log in</a>
+        
+      </div>
+    </form>
+  </div>
+  <div class="msg-box">
+    <div style="margin-top: 10px;margin-left: 50%;">
+    <h1>create account</h1>
+    <p>..... its free and take a minute </p>
+  </div>
+</div>
+{% endblock %}
